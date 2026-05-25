@@ -45,7 +45,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="footer__copy">
-          &copy; {year} Ahmed Taha &mdash; Built with <FaHeart className="footer__heart" /> using React &amp; TypeScript
+          &copy; {year} Ahmed Taha &mdash; Built by Abd El-Rahman Taha using React &amp; TypeScript
         </p>
       </div>
     </footer>
