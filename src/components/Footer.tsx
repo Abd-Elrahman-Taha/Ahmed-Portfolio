@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope} from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
@@ -45,7 +45,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="footer__copy">
-          &copy; {year} Ahmed Taha &mdash; Built by Abd El-Rahman Taha using React &amp; TypeScript
+          &copy; {year} Ahmed Taha &mdash; Built by Abd El-Rahman Taha using React.js &amp; TypeScript
         </p>
       </div>
     </footer>
