@@ -427,10 +427,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: 50%;
   padding: 5px;
   background: conic-gradient(var(--accent) 0deg, transparent 120deg, var(--accent-dim) 240deg, transparent 360deg);
-  animation: ring-rotate 8s linear infinite;
+  animation: ease .4s linear infinite;
   flex-shrink: 0;
 }
-@keyframes ring-rotate { to { transform: rotate(360deg); } }
+
 
 .hero__avatar {
   width: 100%;
