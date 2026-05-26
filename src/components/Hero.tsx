@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaChevronDown, FaCode } from 'react-icons/fa';
 import { SiDocker, SiKubernetes } from 'react-icons/si';
 import { FaAws } from 'react-icons/fa';
+import mainImage from '../assets/main.png';
 
 const roles = ['DevOps Engineer', 'Cloud Architect', 'CI/CD Specialist', 'Infrastructure Automator'];
 
@@ -124,10 +125,11 @@ const Hero = () => {
         >
           <div className="hero__avatar-ring">
             <div className="hero__avatar">
-              <div className="hero__avatar-placeholder">
-                <span className="hero__avatar-initials">AT</span>
-                <div className="hero__avatar-bg-pattern" />
-              </div>
+              <img
+                src={mainImage}
+                alt="Ahmed Taha"
+                className="hero__avatar-image"
+              />
             </div>
           </div>
 
