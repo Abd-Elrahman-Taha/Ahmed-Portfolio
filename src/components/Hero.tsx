@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { motion, type Variants, type Transition } from 'framer-motion';
-import { Link } from 'react-scroll';
+import { Link, scroller } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaChevronDown, FaCode } from 'react-icons/fa';
 import { SiDocker, SiKubernetes } from 'react-icons/si';
 import { FaAws } from 'react-icons/fa';
 import mainImage from '../assets/main.png';
+import ProfileCard from './ProfileCard';
 
 const roles = ['DevOps Engineer', 'Cloud Architect', 'CI/CD Specialist', 'Infrastructure Automator'];
 
@@ -116,22 +117,31 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right: Avatar */}
+        {/* Right: Profile Card */}
         <motion.div
           className="hero__avatar-wrapper"
-          initial={{ opacity: 0, scale: 0.85 }}
+          initial={{ opacity: 0, scale: 0.88 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
         >
-          <div className="hero__avatar-ring">
-            <div className="hero__avatar">
-              <img
-                src={mainImage}
-                alt="Ahmed Taha"
-                className="hero__avatar-image"
-              />
-            </div>
-          </div>
+          <ProfileCard
+            name="Ahmed Taha"
+            title="DevOps & Cloud Engineer"
+            handle="AhmedTaha164"
+            status="Available for hire"
+            contactText="Contact Me"
+            avatarUrl={mainImage}
+            miniAvatarUrl={mainImage}
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={() => {
+              scroller.scrollTo('contact', { smooth: true, duration: 500, offset: -80 });
+            }}
+            behindGlowColor="rgba(163, 230, 53, 0.45)"
+            behindGlowEnabled={true}
+            innerGradient="linear-gradient(145deg, rgba(163, 230, 53, 0.12) 0%, rgba(56, 189, 248, 0.18) 100%)"
+          />
 
           {/* Floating badges */}
           <motion.div
